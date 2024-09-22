@@ -1,8 +1,17 @@
  const balance = document.getElementById("balance");
+ const donatedMoney1= document.getElementById("donateMoney1");
+ const donatedMoney2= document.getElementById("donateMoney2");
+ const donatedMoney3= document.getElementById("donateMoney3");
   const historyDiv = document.getElementById("history-div");
+//   input function
 function toNumber(id){
     return document.getElementById(id).value;
+};
+// money function
+function isMoney(id){
+    return parseFloat(document.getElementById(id).innerText);
 }
+
 document.getElementById("donate-noakhali").addEventListener("click",function(){
      const Donate1 = parseFloat(toNumber("donate-iput1"));
     if(Donate1<0 || isNaN(Donate1)){
@@ -10,9 +19,9 @@ document.getElementById("donate-noakhali").addEventListener("click",function(){
 
         return;
     }
-   const mainBalance = parseFloat(balance.innerText);
+   const mainBalance = isMoney("balance");
   
-   document.getElementById("donateMoney1").innerText = Donate1;
+   donatedMoney1.innerText = Donate1 + isMoney("donateMoney1");
    balance.innerText = mainBalance - Donate1;
    document.getElementById("donate-iput1").value = "";
     document.getElementById("my_modal_1").showModal();
@@ -21,9 +30,7 @@ document.getElementById("donate-noakhali").addEventListener("click",function(){
   
    div.innerHTML = `<h3 class="text-xl font-bold">${Donate1} Taka is Donated for famine-2024 at Noakhali, Bangladesh</h3>
    <p>Date: ${new Date()}</p>`
-  
   historyDiv.insertBefore(div,historyDiv.firstChild);
-
 });
 // donate for feni
 
@@ -34,9 +41,9 @@ document.getElementById("donate-feni").addEventListener("click",function(){
 
         return;
     }
-   const mainBalance = parseFloat(balance.innerText);
+   const mainBalance = isMoney('balance');
   
-   document.getElementById("donateMoney2").innerText = Donate2;
+  donatedMoney2.innerText = Donate2 + isMoney("donateMoney2");
    balance.innerText = mainBalance - Donate2;
    document.getElementById("donate-iput2").value = "";
    document.getElementById("my_modal_1").showModal();
@@ -56,9 +63,9 @@ document.getElementById("donate-quta").addEventListener("click",function(){
 
         return;
     }
-   const mainBalance = parseFloat(balance.innerText);
+   const mainBalance = isMoney("balance");
   
-   document.getElementById("donateMoney3").innerText = Donate3;
+  donatedMoney3.innerText = Donate3 + isMoney("donateMoney3");
    balance.innerText = mainBalance - Donate3;
    document.getElementById("donate-iput3").value = "";
    document.getElementById("my_modal_1").showModal();
@@ -84,3 +91,7 @@ document.getElementById("donation").addEventListener("click",function(){
     document.getElementById("donate-section").classList.remove("hidden");
     document.getElementById("donation").classList.add("bg-[#B4F461]");
 });
+// blog
+document.getElementById("blog").addEventListener('click',function(){
+    window.location.href = 'blog.html';
+})
