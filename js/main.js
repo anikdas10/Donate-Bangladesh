@@ -93,5 +93,5 @@ document.getElementById("donation").addEventListener("click",function(){
 });
 // blog
 document.getElementById("blog").addEventListener('click',function(){
-    window.location.href = 'blog.html';
+    window.location.href = '/blog.html';
 })
