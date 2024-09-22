@@ -15,8 +15,10 @@ document.getElementById("donate-noakhali").addEventListener("click",function(){
    document.getElementById("donateMoney1").innerText = Donate1;
    balance.innerText = mainBalance - Donate1;
    document.getElementById("donate-iput1").value = "";
+    document.getElementById("my_modal_1").showModal();
    const div = document.createElement('div');
    div.classList.add("border","p-6","rounded-xl","space-y-5");
+  
    div.innerHTML = `<h3 class="text-xl font-bold">${Donate1} Taka is Donated for famine-2024 at Noakhali, Bangladesh</h3>
    <p>Date: ${new Date()}</p>`
   
@@ -37,6 +39,7 @@ document.getElementById("donate-feni").addEventListener("click",function(){
    document.getElementById("donateMoney2").innerText = Donate2;
    balance.innerText = mainBalance - Donate2;
    document.getElementById("donate-iput2").value = "";
+   document.getElementById("my_modal_1").showModal();
    const div = document.createElement('div');
    div.classList.add("border","p-6","rounded-xl","space-y-5");
    div.innerHTML = `<h3 class="text-xl font-bold">${Donate2} Taka is Donated for Flood Relief in Feni, Bangladesh</h3>
@@ -58,6 +61,7 @@ document.getElementById("donate-quta").addEventListener("click",function(){
    document.getElementById("donateMoney3").innerText = Donate3;
    balance.innerText = mainBalance - Donate3;
    document.getElementById("donate-iput3").value = "";
+   document.getElementById("my_modal_1").showModal();
    const div = document.createElement('div');
    div.classList.add("border","p-6","rounded-xl","space-y-5");
    div.innerHTML = `<h3 class="text-xl font-bold">${Donate3} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</h3>
