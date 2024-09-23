@@ -15,12 +15,17 @@ function isMoney(id){
 document.getElementById("donate-noakhali").addEventListener("click",function(){
      const Donate1 = parseFloat(toNumber("donate-iput1"));
     if(Donate1<0 || isNaN(Donate1)){
-        alert('Invalid Input');
+        alert('Invalid Donation Amount');
+        document.getElementById("donate-iput1").value = "";
 
         return;
     }
    const mainBalance = isMoney("balance");
-  
+   if(mainBalance<Donate1){
+    alert("Insufficient Balance");
+     document.getElementById("donate-iput1").value = "";
+    return ;
+   }
    donatedMoney1.innerText = Donate1 + isMoney("donateMoney1");
    balance.innerText = mainBalance - Donate1;
    document.getElementById("donate-iput1").value = "";
@@ -37,12 +42,17 @@ document.getElementById("donate-noakhali").addEventListener("click",function(){
 document.getElementById("donate-feni").addEventListener("click",function(){
      const Donate2 = parseFloat(toNumber("donate-iput2"));
     if(Donate2<0 || isNaN(Donate2)){
-        alert('Invalid Input');
+        alert('Invalid Donation Amount');
+        document.getElementById("donate-iput2").value = "";
 
         return;
     }
    const mainBalance = isMoney('balance');
-  
+   if(mainBalance<Donate2){
+    alert("Insufficient Balance");
+     document.getElementById("donate-iput2").value = "";
+    return ;
+   }
   donatedMoney2.innerText = Donate2 + isMoney("donateMoney2");
    balance.innerText = mainBalance - Donate2;
    document.getElementById("donate-iput2").value = "";
@@ -59,11 +69,17 @@ document.getElementById("donate-feni").addEventListener("click",function(){
 document.getElementById("donate-quta").addEventListener("click",function(){
      const Donate3 = parseFloat(toNumber("donate-iput3"));
     if(Donate3<0 || isNaN(Donate3)){
-        alert('Invalid Input');
-
+        alert('Invalid Donation Amount');
+        document.getElementById("donate-iput3").value = "";
         return;
     }
+    
    const mainBalance = isMoney("balance");
+   if(mainBalance<Donate3){
+    alert("Insufficient Balance");
+     document.getElementById("donate-iput3").value = "";
+    return ;
+   }
   
   donatedMoney3.innerText = Donate3 + isMoney("donateMoney3");
    balance.innerText = mainBalance - Donate3;
