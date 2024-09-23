@@ -73,7 +73,7 @@ document.getElementById("donate-quta").addEventListener("click",function(){
         document.getElementById("donate-iput3").value = "";
         return;
     }
-    
+
    const mainBalance = isMoney("balance");
    if(mainBalance<Donate3){
     alert("Insufficient Balance");
@@ -108,6 +108,6 @@ document.getElementById("donation").addEventListener("click",function(){
     document.getElementById("donation").classList.add("bg-[#B4F461]");
 });
 // blog
-document.getElementById("blog").addEventListener('click',function(){
-    window.location.href = '/blog.html';
-})
+// document.getElementById("blog").addEventListener('click',function(){
+//     window.location.href = '/blog.html';
+// })
