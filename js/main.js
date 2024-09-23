@@ -107,7 +107,4 @@ document.getElementById("donation").addEventListener("click",function(){
     document.getElementById("donate-section").classList.remove("hidden");
     document.getElementById("donation").classList.add("bg-[#B4F461]");
 });
-// blog
-// document.getElementById("blog").addEventListener('click',function(){
-//     window.location.href = '/blog.html';
-// })
+ 
