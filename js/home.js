@@ -1,3 +1,3 @@
 document.getElementById("home").addEventListener("click",function(){
-    location.replace("/index.html");
+    window.location.href="/index.html";
 })
