@@ -93,7 +93,7 @@ document.getElementById("donate-quta").addEventListener("click",function(){
   historyDiv.insertBefore(div,historyDiv.firstChild);
 
 });
-// hidden button
+// history button
 document.getElementById("history").addEventListener("click",function(){
     document.getElementById('history').classList.add("bg-[#B4F461]");
     historyDiv.classList.remove('hidden');
